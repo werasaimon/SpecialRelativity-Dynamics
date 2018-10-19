@@ -1,6 +1,8 @@
 # SpecialRelativity-Particles
 
-
+  Windows (OpenGL-GLUT)
+  ------------
+https://drive.google.com/file/d/0Bx_LsIsmyGthQzV0OFozdkt5a2c/view?usp=sharing
 
 <div                                             id="/installation">&nbsp;</div>
 
@@ -11,6 +13,12 @@
 $ sudo apt-get install libglut3-dev
 ```
 
+
+
+
+
+
+#  Demo Spin Galaxy 
 
 ![title](https://j.gifs.com/yrqlmW.gif)
 
