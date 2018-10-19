@@ -53,7 +53,7 @@ struct ICamera
 } camera;
 
 
-IMatrix4x4r mOrientCamera;
+Matrix4 mOrientCamera;
 
 
 
@@ -63,7 +63,7 @@ IParticleSystem         ParticleSystem;
 
 
 
-float TimeStep = 1.0 / 60.0;
+//float TimeStep = 1.0 / 2.0;
 bool Pause = true;
 
 // Initialization
@@ -80,11 +80,11 @@ void initilization()
     float zFar   = 1024;
     float fov    = 45.0;
 
-    IMatrix4x4r  Prespective = IMatrix4x4r::CreatePerspective(fov, aspect , zNear , zFar );
+    Matrix4  Prespective = Matrix4::CreatePerspective(fov, aspect , zNear , zFar );
 
     glLoadIdentity();
     glMatrixMode(GL_PROJECTION);
-    glLoadMatrixd(Prespective);
+    glLoadMatrixf(Prespective);
 
     //srand(time(0));
     int size = 15;
@@ -123,17 +123,17 @@ void display()
     float zFar   = 1024;
     float fov    = 45.0;
 
-    IMatrix4x4r  Prespective = IMatrix4x4r::CreatePerspective(fov, aspect , zNear , zFar );
-    IMatrix4x4r  ViewModel   = IMatrix4x4r::CreateLookAt( -camera.mEye , camera.mCenter , camera.mUp );
+    Matrix4  Prespective = Matrix4::CreatePerspective(fov, aspect , zNear , zFar );
+    Matrix4  ViewModel   = Matrix4::CreateLookAt( -camera.mEye , camera.mCenter , camera.mUp );
 
 
     glLoadIdentity();
     glMatrixMode(GL_PROJECTION);
-    glLoadMatrixd(Prespective);
+    glLoadMatrixf(Prespective);
 
 
     glMatrixMode(GL_MODELVIEW);
-    glLoadMatrixd(ViewModel);
+    glLoadMatrixf(ViewModel);
 
 
 
@@ -158,14 +158,22 @@ void display()
     glPopMatrix();
 
 
-    print_text( 20 , Height - 20 , " KEY   : (W,S,A,D)  : Move-Camera");
-    print_text( 20 , Height - 40 , " MOUSE : (LEFT_KEY) : Rotate-Camera");
+    print_text( 10 , Height - 20 , " KEY   : (W,S,A,D,MOUSE-WHELL)  : Move-Camera");
+    print_text( 10 , Height - 40 , " MOUSE : (LEFT_KEY)             : Rotate-Camera");
 
-    print_text( 20 , Height - 60 , " KEY   : (Down)     : ApplyImpulseMoment");
+    if(!Pause)
+    {
+         print_text( 10 , Height - 60 , " KEY   : (SPACE)    : Simulate-ON");
+    }
+    else
+    {
+         print_text( 10 , Height - 60 , " KEY   : (SPACE)    : Simulate-OFF");
+    }
+
 
     char buff[256];
     sprintf( buff , " Particles-Size     : %zu " , Particles.size());
-    print_text( 20 , Height - 80 , buff);
+    print_text( 10 , Height - 80 , buff);
 
     glutSwapBuffers();
 
@@ -193,11 +201,16 @@ void UpdateTime(void)
     camera.mEye = zoom_distance * Vector3::Z * mOrientCamera.GetInverse();
     display();
 
-    float timeStep = 1.0 / 60.f;
-    ParticleSystem.Update(timeStep);
+    if( !Pause )
+    {
+        float timeStep = 1.0 / 1.f;
+        ParticleSystem.Update(timeStep);
+
+        // Apply Angular Moment
+        ParticleSystem.AdvancedAngularMoment(Vector3::Y * 0.04);
+    }
 
 
-    ParticleSystem.AdvancedAngularMoment(Vector3::Y);
 
 };
 
@@ -213,11 +226,11 @@ void reshape(int width, int height)
     float zFar   = 1024;
     float fov    = 45.0;
 
-    IMatrix4x4r  Prespective = IMatrix4x4r::CreatePerspective(fov, aspect , zNear , zFar );
+    Matrix4  Prespective = Matrix4::CreatePerspective(fov, aspect , zNear , zFar );
 
     glLoadIdentity();
     glMatrixMode(GL_PROJECTION);
-    glLoadMatrixd(Prespective);
+    glLoadMatrixf(Prespective);
 }
 
 
@@ -275,8 +288,8 @@ void mouseMotion(int x, int y)
    oldY = m_y;
 
 
-   mOrientCamera = IMatrix4x4r::CreateRotationAxis( Vector3::Y , angle_X );
-   mOrientCamera = IMatrix4x4r::CreateRotationAxis( Vector3::X , angle_Y ) * mOrientCamera;
+   mOrientCamera = Matrix4::CreateRotationAxis( Vector3::Y , angle_X );
+   mOrientCamera = Matrix4::CreateRotationAxis( Vector3::X , angle_Y ) * mOrientCamera;
 
 }
 

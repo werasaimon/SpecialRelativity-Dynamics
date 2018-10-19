@@ -25,15 +25,14 @@ void IParticleSystem::DeleteParticle(IParticle *particle)
 void IParticleSystem::Update(float TimeStep)
 {
 
-
-    TimeStep = 1.f/2.f;
-
     for( auto it = mParticles.begin(); it != mParticles.end(); ++it )
     {
         IParticle *particle = *it;
 
-         Matrix4 MatrixLorentzBoost = Matrix4::CreateLorentzBoostInvert( particle->mVelocity * TimeStep , mLightSpeed );
-         particle->mPosition = (MatrixLorentzBoost * LVector4( particle->mPosition , 1.0)).GetXYZ();
+        float ownTimeStep =  TimeDilation(TimeStep , Gamma(particle->mVelocity * TimeStep)); // Own local time interval
+
+        Matrix4 MatrixLorentzBoost = Matrix4::CreateLorentzBoostInvert( particle->mVelocity * ownTimeStep , mLightSpeed );
+        particle->mPosition = (MatrixLorentzBoost * LVector4( particle->mPosition , 1.0)).GetXYZ();
     }
 
 }
@@ -45,9 +44,9 @@ void IParticleSystem::AdvancedAngularMoment(const Vector3 &AngularMomentAxis)
     {
         IParticle *particle = *it;
 
-        Vector3 moment = AngularMomentAxis.Cross(particle->GetPosition()) * 0.05;// * mParticles[i].mMassInverse;
+        Vector3 moment = AngularMomentAxis.Cross(particle->GetPosition());
         //Vector3 moment = -Vector3::Y  * 0.05;
-      //  particle->mVelocity.SetToZero();
+        particle->mVelocity.SetToZero();
        if(!std::isnan(moment.x) ||
           !std::isnan(moment.y) ||
           !std::isnan(moment.z))
@@ -55,8 +54,7 @@ void IParticleSystem::AdvancedAngularMoment(const Vector3 &AngularMomentAxis)
            particle->ApplyImpulse(moment);
        }
 
-        // mParticles[i].mVelocity +=  moment;
-        // mParticles[i].mVelocity /= (1.0 + ((moment).Dot(mParticles[i].mVelocity)/(mLightSpeed*mLightSpeed)));;
+
     }
 
 }
