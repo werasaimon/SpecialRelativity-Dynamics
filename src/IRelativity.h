@@ -6,7 +6,7 @@
 
 /**
 * Relativistically adds two velocities, v and u, and returns their sum, w;
-* each velocity is expressed as a 2-vector in the form (x,y),(x,y);
+* each velocity is expressed as a 3-vector in the form (x,y,z),(x,y,z);
 * treats v as the velocity of a relativistic reference frame and u as the
 * velocity of something within that frame
 **/
