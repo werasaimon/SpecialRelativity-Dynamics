@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="RelativityPhysics"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/bin"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/bin/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/bin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/bin/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/bin/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/bin"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/bin/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/bin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/bin/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/bin/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RelativityPhysics">
+				<Option output="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/bin/RelativityPhysics" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/bin/Makefile&quot;  VERBOSE=1 RelativityPhysics"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/bin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/bin/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/bin/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RelativityPhysics/fast">
+				<Option output="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/bin/RelativityPhysics" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/bin/Makefile&quot;  VERBOSE=1 RelativityPhysics/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/bin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/bin/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/bin/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/bin"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/bin/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/bin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/bin/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/bin/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/IMath/IAlgebra.h">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/IMath/IComplex.h">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/IMath/IFunc.h">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/IMath/ILine3D.h">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/IMath/ILineSegment3D.h">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/IMath/ILorentzVector.h">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/IMath/IMaths.h">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/IMath/IMatrix2x2.h">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/IMath/IMatrix3x3.h">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/IMath/IMatrix4x4.h">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/IMath/IOctonion.h">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/IMath/IPlane.h">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/IMath/IQuaternion.h">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/IMath/IRay.h">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/IMath/IReal.h">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/IMath/IScalarType.h">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/IMath/ISpherical.h">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/IMath/ITransform.h">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/IMath/IVector.h">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/IMath/IVector2D.h">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/IMath/IVector3D.h">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/IMath/IVector4D.h">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/IMath/IVectorType.h">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/IMathematics.h">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/IParticle.cpp">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/IParticle.h">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/IParticleSystem.cpp">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/IParticleSystem.h">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/IRelativity.h">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/freeglut/freeglut_callbacks.c">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/freeglut/freeglut_cursor.c">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/freeglut/freeglut_display.c">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/freeglut/freeglut_ext.c">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/freeglut/freeglut_font.c">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/freeglut/freeglut_font_data.c">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/freeglut/freeglut_gamemode.c">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/freeglut/freeglut_geometry.c">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/freeglut/freeglut_glutfont_definitions.c">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/freeglut/freeglut_init.c">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/freeglut/freeglut_input_devices.c">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/freeglut/freeglut_joystick.c">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/freeglut/freeglut_main.c">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/freeglut/freeglut_menu.c">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/freeglut/freeglut_misc.c">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/freeglut/freeglut_overlay.c">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/freeglut/freeglut_spaceball.c">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/freeglut/freeglut_state.c">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/freeglut/freeglut_stroke_mono_roman.c">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/freeglut/freeglut_stroke_roman.c">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/freeglut/freeglut_structure.c">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/freeglut/freeglut_teapot.c">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/freeglut/freeglut_videoresize.c">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/freeglut/freeglut_window.c">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/freeglut/freeglut_xinput.c">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/main.cpp">
+			<Option target="RelativityPhysics"/>
+		</Unit>
+		<Unit filename="/home/wera/Dropbox/code/RelativityPhysics/temp3/RelativityPhysics/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
