@@ -1,4 +1,5 @@
-# SpecialRelativity-Dynamics
+# SpecialRelativity-Particles
+
 
 
 <div                                             id="/installation">&nbsp;</div>
@@ -9,6 +10,12 @@
 ```sh
 $ sudo apt-get install libglut3-dev
 ```
+
+
+![title](https://j.gifs.com/yrqlmW.gif)
+
+
+
 
    Velocity Addtion Formula Decomposition
    ------------
