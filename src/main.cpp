@@ -56,12 +56,10 @@ struct ICamera
 Matrix4 mOrientCamera;
 
 
-
-
 std::vector<IParticle*> Particles;
 IParticleSystem         ParticleSystem;
 
-
+Vector3 AngularMomentAxis = Vector3::Y;
 
 //float TimeStep = 1.0 / 2.0;
 bool Pause = true;
@@ -136,9 +134,18 @@ void display()
     glLoadMatrixf(ViewModel);
 
 
-
     glEnable(GL_DEPTH_TEST);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+    glPushMatrix();
+    glColor3f(0,0,1);
+    glBegin(GL_LINES);
+    glVertex3f(0,0,0);
+    glVertex3fv(AngularMomentAxis * 5.f);
+    glVertex3f(0,0,0);
+    glVertex3fv(AngularMomentAxis * -5.f);
+    glEnd();
+    glPopMatrix();
 
 
     glPushMatrix();
@@ -207,7 +214,7 @@ void UpdateTime(void)
         ParticleSystem.Update(timeStep);
 
         // Apply Angular Moment
-        ParticleSystem.AdvancedAngularMoment(Vector3::Y * 0.04);
+        ParticleSystem.AdvancedAngularMoment(AngularMomentAxis * 0.004);
     }
 
 

@@ -2,9 +2,14 @@
 #define IPARTICLESYSTEM_H
 
 #include "IParticle.h"
+
+
+
 #include "IMathematics.h"
 #include <vector>
 #include <set>
+
+
 
 
 class IParticleSystem
