@@ -28,7 +28,7 @@ $ sudo apt-get install libglut3-dev
    Velocity Addtion Formula Decomposition
    ------------
 
-
+https://en.wikipedia.org/wiki/Wigner_rotation
 
 ![title](https://wikimedia.org/api/rest_v1/media/math/render/svg/e32cd3766d5a81eada5e712aa95a4047ffced308)
 
