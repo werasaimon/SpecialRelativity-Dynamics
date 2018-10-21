@@ -635,40 +635,20 @@ private:
 
 
 
-    /**
-     * Vector multiplication operator.
-     *
-     * Multiplies the matrix `rhs` on the left by the row vector `lhs`,
-     * returning the resulting vector.
-     *
-     * @param lhs The matrix.
-     * @param rhs The row vector.
-     * @return The vector `lhs` multiplied by the matrix `rhs` on the right.
-     */
-    friend SIMD_INLINE IVector4D<T> operator*(const ILorentzVector<T>& rhs , const IMatrix4x4<T>& lhs)
-    {
-
-        IVector4D<T> u = IVector4D<T>(lhs.mRows[0][0]*rhs.x + lhs.mRows[1][0]*rhs.y + lhs.mRows[2][0]*rhs.z + rhs.t*lhs.mRows[3][0],
-                                      lhs.mRows[0][1]*rhs.x + lhs.mRows[1][1]*rhs.y + lhs.mRows[2][1]*rhs.z + rhs.t*lhs.mRows[3][1],
-                                      lhs.mRows[0][2]*rhs.x + lhs.mRows[1][2]*rhs.y + lhs.mRows[2][2]*rhs.z + rhs.t*lhs.mRows[3][2],
-                                      lhs.mRows[0][3]*rhs.x + lhs.mRows[1][3]*rhs.y + lhs.mRows[2][3]*rhs.z + rhs.t*lhs.mRows[3][3]);
-        return u;
-    }
-
 
     /**
     * Multiplication operator
     * @param rhs Right hand side argument of binary operator.
     */
-    SIMD_INLINE ILorentzVector<T> operator*(const ILorentzVector<T>& rhs) const
+    SIMD_INLINE ILorentzVector<T> operator*(const ILorentzVector<T>& rhs ) const
     {
-       ILorentzVector<T> u = ILorentzVector<T>(mRows[0][0]*rhs.x + mRows[0][1]*rhs.y + mRows[0][2]*rhs.z + rhs.t*mRows[0][3],
-                                               mRows[1][0]*rhs.x + mRows[1][1]*rhs.y + mRows[1][2]*rhs.z + rhs.t*mRows[1][3],
-                                               mRows[2][0]*rhs.x + mRows[2][1]*rhs.y + mRows[2][2]*rhs.z + rhs.t*mRows[2][3],
-                                               mRows[3][0]*rhs.x + mRows[3][1]*rhs.y + mRows[3][2]*rhs.z + rhs.t*mRows[3][3]);
-
+        ILorentzVector<T> u = ILorentzVector<T>(mRows[0][0]*rhs.x + mRows[1][0]*rhs.y + mRows[2][0]*rhs.z + rhs.t*mRows[3][0],
+                                                mRows[0][1]*rhs.x + mRows[1][1]*rhs.y + mRows[2][1]*rhs.z + rhs.t*mRows[3][1],
+                                                mRows[0][2]*rhs.x + mRows[1][2]*rhs.y + mRows[2][2]*rhs.z + rhs.t*mRows[3][2],
+                                                mRows[0][3]*rhs.x + mRows[1][3]*rhs.y + mRows[2][3]*rhs.z + rhs.t*mRows[3][3]);
         return u;
     }
+
 
 
 
@@ -1204,50 +1184,6 @@ private:
          XX(), XY() .. TT(),
          through the operator (int,int):
       */
-
-     //-------------------------------------------------------------------//
-
-     static SIMD_INLINE IMatrix4x4<T> CreateLorentzBoostInvert( const IVector3D<T> &vel , const T &_LightSpeed = DEFAUL_LIGHT_MAX_VELOCITY_C )
-     {
-
-        static IMatrix4x4<T> M = IMatrix4x4<T>::IDENTITY;
-
-        const IVector3D<T> n = vel.GetUnit();
-        const T             v = vel.Length();
-
-        const T c = _LightSpeed;
-
-        //boost this  invert Lorentz-gamma_factor
-        T gamma = 1.0 * ISqrt( 1.0 - (v*v) / (c*c) );
-
-        // T bgamma = gamma * gamma / (1.0 + gamma);
-        T bgamma = (gamma - 1.0);
-
-        // Matrix Lorentz 4x4
-        M[0][0] = 1.0+((bgamma)*((n.x * n.x)));
-        M[1][0] =     ((bgamma)*((n.y * n.x)));
-        M[2][0] =     ((bgamma)*((n.z * n.x)));
-        M[3][0] = (v*n.x*gamma);
-
-        M[0][1] =     ((bgamma)*((n.x * n.y)));
-        M[1][1] = 1.0+((bgamma)*((n.y * n.y)));
-        M[2][1] =     ((bgamma)*((n.z * n.y)));
-        M[3][1] = (v*n.y*gamma);
-
-        M[0][2] =      ((bgamma)*((n.x * n.z)));
-        M[1][2] =      ((bgamma)*((n.y * n.z)));
-        M[2][2] =  1.0+((bgamma)*((n.z * n.z)));
-        M[3][2] = (v*n.z*gamma);
-
-        M[0][3] =  v*n.x*gamma/(c*c);
-        M[1][3] =  v*n.y*gamma/(c*c);
-        M[2][3] =  v*n.z*gamma/(c*c);
-        M[3][3] =  gamma;
-
-
-         return M;
-    }
-
 
      //-------------------------------------------------------------------//
 
