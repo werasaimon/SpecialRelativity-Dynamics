@@ -34,6 +34,7 @@ $ sudo apt-get install libglut3-dev
 
 ```c++
 /**
+* Two general boosts Wigner https://en.wikipedia.org/wiki/Wigner_rotation
 * Relativistically adds two velocities, v and u, and returns their sum, w;
 * each velocity is expressed as a 3-vector in the form (x,y,z),(x,y,z);
 * treats v as the velocity of a relativistic reference frame and u as the
@@ -41,23 +42,24 @@ $ sudo apt-get install libglut3-dev
 **/
 static Vector3 VelocityAddition(const Vector3 &vComp,
                                 const Vector3 &uComp,
-                                const float &gamma_v,
+                                const float &gamma_u,
                                 const float &c)
 {
 
-    float dot_VU = std::abs((vComp).Dot(uComp))/(c*c);
+    float dot_VU = std::abs((uComp).Dot(vComp))/(c*c);
+
 
     /**
-    * using the values calculated above, calculates one component at a time of
+    * using the values calculated above general boosts Wigner , calculates one component at a time of
     * the velocity resulting from the relativistic addition of v and u
     * ------------------------------------------------------------------
     * if the relativistical velocity sum is w:
-    *         1                            gamma_v
-    * w = -------- * [ vComp * ( 1+dot_VU*--------- ) + uComp/gamma_v ]
-    *     1+dot_VU                         1+gamma_v
+    *         1                            gamma_u
+    * w = -------- * [ vComp * ( 1+dot_UV*--------- ) + uComp/gamma_u ]
+    *     1+dot_UV                         1+gamma_u
     **/
 
-    return (1.0/(1.0+dot_VU)) * (vComp * (1.f+dot_VU*(gamma_v/(1.f+gamma_v))) + (uComp/gamma_v));
+    return (1.0/(1.0+dot_VU)) * (uComp * (1.f+dot_VU*(gamma_u/(1.f+gamma_u))) + (vComp/gamma_u));
 }
 ```
 
